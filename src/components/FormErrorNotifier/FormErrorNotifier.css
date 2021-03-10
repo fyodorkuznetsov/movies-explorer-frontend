@@ -1,0 +1,13 @@
+.error-notifier{
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  color: #ff004c;
+  min-height: 14px;
+}
+.error-notifier_type_auth{
+  font-size: 10px;
+  line-height: 12px;
+}

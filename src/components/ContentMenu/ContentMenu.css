@@ -1,0 +1,39 @@
+.navbar__menu-item{
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  text-decoration: none;
+  color: #000;
+  margin-right: 17px;
+}
+.navbar__menu-item_theme_dark{
+  color: #fff;
+}
+.navbar__menu-item_state_active{
+  font-weight: 500;
+}
+.navbar__menu-item_type_mobile{
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
+@media screen and (max-width: 768px){
+  .navbar__menu-item {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 0 24px;
+    padding-bottom: 3px;
+    color: #000;
+  }
+  .navbar__menu-item_state_active{
+    border-bottom: 2px solid #000;
+  }
+  .navbar__menu-item_type_mobile{
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  }
+
+}

@@ -1,0 +1,116 @@
+.about{
+  padding: 110px 70px;
+}
+.about__columns{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 70px 0 0;
+  padding: 0;
+  list-style-type: none;
+}
+.about__column{
+  /*  for not supported calc*/
+  width: 48%;
+  width: calc(50% - 20px);
+  margin-bottom: 110px;
+}
+.about__column-title{
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0 0 26px;
+  letter-spacing: -0.8px;
+}
+.about__column-description{
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
+.about__timeline{
+  display: flex;
+}
+.about__timeline-item{
+  width: 80%;
+}
+.about__timeline-item_type_small{
+  width: 20%;
+}
+.about__timeline-title{
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  margin: 0;
+  padding: 9px 0;
+  background-color: #f2f2f2;
+}
+.about__timeline-title_type_colored{
+  background-color: #2be080;
+}
+.about__timeline-description{
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 15px 0 0;
+  color: #a0a0a0;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px){
+  .about{
+    padding: 91px 50px;
+  }
+  .about__column{
+    width: calc(50% - 15px);
+    margin-bottom: 94px;
+  }
+  .about__column-title{
+    margin-bottom: 22px;
+  }
+  .about__column-description{
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .about__timeline-item_type_small{
+    width: 21%;
+  }
+}
+@media screen and (max-width: 500px){
+  .about{
+    padding: 70px 18px;
+  }
+  .about__columns{
+    margin-top: 61px;
+    flex-direction: column;
+  }
+  .about__column-title{
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.04em;
+    margin-bottom: 14px;
+  }
+  .about__column{
+    width: 100%;
+    margin-bottom: 59px;
+  }
+  .about__column-description{
+    font-size: 11px;
+    line-height: 16px;
+  }
+  .about__timeline-title{
+    font-size: 11px;
+    line-height: 13px;
+    padding: 11px 0;
+  }
+  .about__timeline-item_type_small{
+    width: 43%;
+  }
+  .about__timeline-description{
+    font-size: 11px;
+    line-height: 13px;
+    margin-top: 11px;
+  }
+}

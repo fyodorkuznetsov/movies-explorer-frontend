@@ -1,0 +1,8 @@
+.saved-moves-wrap{
+  flex: 1 0;
+}
+@media screen and (max-width: 768px){
+  .saved-moves-wrap{
+    margin-bottom: 125px;
+  }
+}

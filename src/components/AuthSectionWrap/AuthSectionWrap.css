@@ -1,5 +1,5 @@
 .auth-section{
-  min-width: 396px;
+  width: 396px;
   margin: 0 auto;
   padding-top: 70px;
 }
@@ -27,6 +27,10 @@
 }
 .auth-section__button:hover{
   opacity: 0.7;
+}
+.auth-section__button_state_disabled{
+  background-color: #f8f8f8;
+  color: #c2c2c2;
 }
 .auth-section__form{
   display: flex;
@@ -60,7 +64,7 @@
 }
 @media screen and (max-width: 500px){
   .auth-section{
-    min-width: auto;
+    width: auto;
     padding-top: 56px;
   }
   .auth-section__header{

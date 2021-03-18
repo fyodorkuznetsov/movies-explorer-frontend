@@ -8,25 +8,40 @@
 
 @media screen and (max-width: 1070px){
   .movies{
-    grid-template-columns: repeat(2, minmax(300px, 342px));
+    grid-template-columns: repeat(3, minmax(200px, 250px));
   }
 }
 
 @media screen and (max-width: 768px){
   .movies{
+    grid-template-columns: repeat(2, minmax(200px, 342px));
     padding: 82px 30px 82px;
     grid-gap: 34px 24px;
   }
 }
 @media screen and (max-width: 692px){
   .movies{
-    grid-template-columns: minmax(300px, 342px);
+
     justify-content: center;
   }
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 480px){
   .movies{
+    grid-template-columns: minmax(300px, 342px);
     padding: 44px 10px 80px;
     grid-gap: 14px;
+  }
+}
+.movies-not-found{
+  margin: 0;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+}
+@media screen and (max-width: 692px){
+  .movies-not-found{
+    padding: 0 20px;
   }
 }

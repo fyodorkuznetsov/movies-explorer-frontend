@@ -60,3 +60,9 @@
     visibility: visible;
   }
 }
+
+@media screen and (max-width: 480px){
+  .navbar_type_authorized{
+    width:100%;
+  }
+}

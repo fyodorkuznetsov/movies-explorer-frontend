@@ -1,20 +1,19 @@
 import React from 'react';
 import ProfileEditForm from '../ProfileEditForm/ProfileEditForm';
+import CurrentUserContext from '../../contexts/CurrentUserContext';
+import InfoTooltip from '../InfoTooltIp/InfoTooltip';
 import './Profile.css';
 
-function Profile() {
-  /*  заглушка до работы с API и создания контекста */
-  const userName = 'Виталий';
-  const userEmail = 'pochta@yandex.ru';
-
-  const profileFormSubmitHandler = (e) => {
-    e.preventDefault();
-  };
+function Profile(props) {
+  const currentUser = React.useContext(CurrentUserContext);
 
   return (
     <main className="profile">
-      <h1 className="profile__name">{`Привет, ${userName}!`}</h1>
-      <ProfileEditForm name={userName} email={userEmail} submitHandler={profileFormSubmitHandler}/>
+      <h1 className="profile__name">{`Привет, ${currentUser.name}!`}</h1>
+      <ProfileEditForm submitHandler={props.submitHandler} apiErrorText={props.apiError}
+        handleLogout={props.handleLogout} />
+      <InfoTooltip isOpened={props.isInfoToolTipOpened} resultText={props.infoTooltipMessage}
+        onClose={props.closeInfoTooltip} />
     </main>
   );
 }

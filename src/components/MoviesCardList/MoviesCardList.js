@@ -3,13 +3,19 @@ import MoviesCard from '../MoviesCard/MoviesCard';
 import './MoviesCardList.css';
 
 function MoviesCardList(props) {
-  return (
-    <section className="movies">
-      {props.films.map((film, i) => (
-        <MoviesCard key={i} film={film} savedTemplate={props.saved}/>
-      ))}
-    </section>
-  );
+  const errorText = props.errorText ? props.errorText : 'Ничего не найдено';
+  if (props.films !== null) {
+    return (
+      <section className="movies">
+        {props.films.map((film) => (
+          <MoviesCard key={film.movieId ? film.movieId : film.id} film={film}
+            savedTemplate={props.saved} onFilmLike={props.onFilmLike}
+            handleDelete={props.handleDelete} />
+        ))}
+      </section>
+    );
+  }
+  return (<p className="movies-not-found">{errorText}</p>);
 }
 
 export default MoviesCardList;
